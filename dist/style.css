@@ -47,6 +47,9 @@ h1 {
 
 .menu {
     display: grid;
+    gap: 60px;
+    padding: 60px 120px;
+    grid-template-columns: 1fr 1fr;
 }
 
 .card {
@@ -54,7 +57,6 @@ h1 {
     justify-items: center;
     gap: 8px;
     background-color: rgba(0, 0, 0, 0.834);
-    width: 30%;
     padding: 25px 0;
 }
 
