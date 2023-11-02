@@ -2,6 +2,7 @@ import {createContainer, createImg, createTextElement} from './page-load.js';
 
 const pageLoadElements = (function () {
     const divContent = document.querySelector('#content')
+    const divHeader = divContent.querySelector('.header')
     const p = document.createElement('p');
     const pText = `Milliways, better known as the Restaurant at the End of the Universe, 
     is a five star restaurant situated at the end of time and matter. 
@@ -10,12 +11,11 @@ const pageLoadElements = (function () {
 
     const img = document.createElement('img');
 
-    // const divContainer = divContent.querySelector('.header')
-    createContainer(divContent, 'header');
-    createTextElement(document.createElement('h1'), 'Milliways', divContent);
-    createTextElement(document.createElement('h3'), 'Home', divContent);
-    createTextElement(document.createElement('h3'), 'Menu', divContent);
-    createTextElement(document.createElement('h3'), 'Contact', divContent);
+
+    createTextElement(document.createElement('h1'), 'Milliways', divHeader);
+    createTextElement(document.createElement('span'), 'Home', divHeader);
+    createTextElement(document.createElement('span'), 'Menu', divHeader);
+    createTextElement(document.createElement('span'), 'Contact', divHeader);
 
     createTextElement(p, pText, divContent);
 
