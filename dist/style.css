@@ -27,18 +27,13 @@ p, img {
     background-position: center;
 }
 
-span {
-    padding: 8px 24px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
 .header {
     display: flex;
     flex-wrap: wrap;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.834);
     justify-content: center;
     align-items: center;
+    padding: 12px 0;
 }
 
 h1 {
@@ -57,11 +52,28 @@ h1 {
     display: grid;
     justify-items: center;
     gap: 8px;
-    background-color: rgba(0, 0, 0, 0.834);
+    background-color: rgba(0, 0, 0, 0.907);
     padding: 25px 0;
 }
 
 .card div {
     font-size: 18px;
     font-weight: 600;
+}
+
+span {
+    padding: 8px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: margin 0.2s ease-in-out;
+    font-weight: 600;
+}
+
+span:hover {
+    margin-top: -8px;
+    color: #c65220;
+}
+
+.active {
+    padding: 42px 24px;
 }
