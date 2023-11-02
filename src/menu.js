@@ -7,13 +7,16 @@ function createCard(cssClass) {
     return newDiv;
 }
 
-const menuContainer = createCard('test');
+const menuContainer = createCard('menu');
 
 const card1 = createContainer(menuContainer, 'card');
 
-//Menu has img, div, and p 
+function newMenuItem (cardNumber, item, src, alt, ingredients) {
+    createImg(document.createElement('img'), src, 50, alt, cardNumber);
+    createTextElement(document.createElement('div'), item, cardNumber);
+    createTextElement(document.createElement('p'), ingredients, cardNumber);
+}
 
-createTextElement(document.createElement('div'), 'Space Burger', card1);
-createTextElement(document.createElement('p'), 
-    'juicy spacecow, milky way mayo, asteroid lettuce', card1);
-createImg(document.createElement('img'), './img/hamburger.svg', 50, 'Pasta graphic', card1);
+newMenuItem(card1, 'Space Burger', './img/hamburger.svg', 'Pasta graphic', 
+'juicy spacecow, milky way mayo, asteroid lettuce');
+

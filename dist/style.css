@@ -44,3 +44,21 @@ h1 {
     flex: 1;
     background-color: black;
 }
+
+.menu {
+    display: grid;
+}
+
+.card {
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.834);
+    width: 30%;
+    padding: 25px 0;
+}
+
+.card div {
+    font-size: 18px;
+    font-weight: 600;
+}
