@@ -16,4 +16,5 @@ const createContainer = (parent, cssClass) => {
     const newDiv = document.createElement('div');
     newDiv.classList.add(cssClass);
     parent.appendChild(newDiv);
+    return newDiv;
 };
