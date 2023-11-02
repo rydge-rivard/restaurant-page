@@ -21,7 +21,7 @@ p, img {
 
 #content {
     background-image: url("bar.jpg");
-    height: 900px;
+    height: max(842px);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center;

@@ -4,6 +4,7 @@ export {menuContainer};
 function createCard(cssClass) {
     const newDiv = document.createElement('div');
     newDiv.classList.add(cssClass);
+    newDiv.classList.add('active');
     return newDiv;
 }
 
