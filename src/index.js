@@ -1,4 +1,5 @@
 import {createContainer, createImg, createTextElement} from './page-load.js';
+import {menuContainer} from './menu.js';
 
 const pageLoadElements = (function () {
     const divContent = document.querySelector('#content')
@@ -17,5 +18,5 @@ const pageLoadElements = (function () {
 
     createTextElement(p, pText, divContent);
 
-    // createImg(img, './bar.jpg', '800', 'Bar with wooden walls.', divContent);
+    divContent.appendChild(menuContainer);
 })();
