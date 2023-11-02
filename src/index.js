@@ -15,23 +15,29 @@ const pageLoadElements = (function () {
     divContent.appendChild(homeContainer);
 })();
 
-const render = (function () {
+const switchPages = (function () {
+    const divContent = document.querySelector('#content')
     const menuOptions = document.querySelectorAll('span')
     menuOptions.forEach(option => {
-        option.addEventListener('click', (option) => renderPage(option));
+        bindEvents (option);
     });
+
+    function bindEvents (element) {
+        element.addEventListener('click', () => renderPage(element));
+    }
 
     function removeActivePage () {
         const activeDiv = document.querySelector('.active');
         activeDiv.remove();
     }
 
-    //need to select the write page based on which span was clicked
-    //if span.homeHeader => divContent.appendChild(homeContainer);
-
     function addSelectedPage (element) {
         if (element.classList.contains('menuHeader')) {
             divContent.appendChild(menuContainer);
+        } else if (element.classList.contains('homeHeader')) {
+            divContent.appendChild(homeContainer);
+        } else {
+
         }
     }
 
