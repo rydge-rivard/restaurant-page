@@ -3,6 +3,7 @@
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
+    color: white;
 }
 
 body * {
@@ -16,4 +17,12 @@ h1 {
 
 p, img {
     padding: 0 24px;
+}
+
+#content {
+    background-image: url("bar.jpg");
+    height: 900px;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
 }

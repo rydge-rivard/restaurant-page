@@ -16,5 +16,5 @@ const pageLoadElements = (function () {
     createTextElement(h1, h1Text, divContent);
     createTextElement(p, pText, divContent);
 
-    createImg(img, './bar.jpg', '800', 'Bar with wooden walls.', divContent);
+    // createImg(img, './bar.jpg', '800', 'Bar with wooden walls.', divContent);
 })();
