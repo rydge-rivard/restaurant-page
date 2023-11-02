@@ -13,17 +13,13 @@ const pageLoadElements = (function () {
 
 
     divContent.appendChild(homeContainer);
-})();
 
-const switchPages = (function () {
-    const divContent = document.querySelector('#content')
-    const menuOptions = document.querySelectorAll('span')
-    menuOptions.forEach(option => {
-        bindEvents (option);
-    });
+    const menuOptions = divContent.querySelectorAll('span')
+    menuOptions.forEach(option => option.addEventListener('click', () => renderPage(option)));
 
-    function bindEvents (element) {
-        element.addEventListener('click', () => renderPage(element));
+    function renderPage (element) {
+        removeActivePage();
+        addSelectedPage(element);
     }
 
     function removeActivePage () {
@@ -40,10 +36,4 @@ const switchPages = (function () {
 
         }
     }
-
-    function renderPage (element) {
-        removeActivePage();
-        addSelectedPage(element);
-    }
-
 })();
