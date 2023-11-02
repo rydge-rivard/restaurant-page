@@ -24,7 +24,7 @@ const pageLoadElements = (function () {
 const render = (function () {
     const menuOptions = document.querySelectorAll('span')
     menuOptions.forEach(option => {
-        option.addEventListener('click', (option) => removeActivePage());
+        option.addEventListener('click', (option) => renderPage(option));
     });
 
     function removeActivePage () {
@@ -34,5 +34,16 @@ const render = (function () {
 
     //need to select the write page based on which span was clicked
     //if span.homeHeader => divContent.appendChild(homeContainer);
+
+    function addSelectedPage (element) {
+        if (element.classList.contains('menuHeader')) {
+            divContent.appendChild(menuContainer);
+        }
+    }
+
+    function renderPage (element) {
+        removeActivePage();
+        addSelectedPage(element);
+    }
 
 })();

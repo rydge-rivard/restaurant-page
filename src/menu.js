@@ -1,12 +1,6 @@
-import {createContainer, createImg, createTextElement} from './page-load.js';
+import {createContainer, createImg, createTextElement, createCard} from './page-load.js';
 export {menuContainer};
 
-function createCard(cssClass) {
-    const newDiv = document.createElement('div');
-    newDiv.classList.add(cssClass);
-    newDiv.classList.add('active');
-    return newDiv;
-}
 
 const menuContainer = createCard('menu');
 

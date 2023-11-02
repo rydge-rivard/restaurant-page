@@ -1,4 +1,4 @@
-export {createTextElement, createImg, createContainer, createClassTextElement};
+export {createTextElement, createImg, createContainer, createClassTextElement, createCard};
 
 const createTextElement = (element, text, parent) => {
     element.textContent = text;
@@ -24,3 +24,10 @@ const createContainer = (parent, cssClass) => {
     parent.appendChild(newDiv);
     return newDiv;
 };
+
+const createCard = (cssClass) => {
+    const newDiv = document.createElement('div');
+    newDiv.classList.add(cssClass);
+    newDiv.classList.add('active');
+    return newDiv;
+}
