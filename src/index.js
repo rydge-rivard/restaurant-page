@@ -1,6 +1,7 @@
 import {createContainer, createTextElement, createClassTextElement} from './page-load.js';
 import {menuContainer} from './menu.js';
 import {homeContainer} from './home.js';
+import {contactContainer} from './contact.js'
 
 const pageLoadElements = (function () {
     const divContent = document.querySelector('#content')
@@ -33,7 +34,7 @@ const pageLoadElements = (function () {
         } else if (element.classList.contains('homeHeader')) {
             divContent.appendChild(homeContainer);
         } else {
-
+            divContent.appendChild(contactContainer);
         }
     }
 })();
